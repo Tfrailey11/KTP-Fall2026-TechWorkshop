@@ -36,3 +36,33 @@
 //   );
 // }
 //test
+//
+type MovieProp = {
+  imageUrl : string;
+  title : string;
+  lengthMinutes : number;
+  releaseYear : number;
+  genre : string;
+};
+
+export default function MovieCard({
+  imageUrl,
+  title,
+  genre,
+  lengthMinutes,
+  releaseYear,
+}: MovieProp) {
+  return (
+    <div className="rounded-lg border-slate-600">
+      <img src={imageUrl} className="rounded-lg"></img>
+      <h1>{title}</h1>
+      <h1>{genre}</h1>
+      <h1>{lengthMinutes}</h1>
+      <h1>{releaseYear}</h1>
+    </div>
+  )
+}
+
+
+
+
